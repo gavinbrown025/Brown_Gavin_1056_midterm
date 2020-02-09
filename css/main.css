@@ -1,12 +1,48 @@
 @charset = "UTF-8";
 
-a:link, a:visited, a:active { 
- 	text-decoration:none;	
+@font-face {
+    font-family: "Ballantines Script";
+    src: url('../fonts/Ballantines-Script-webfont.eot');
+    src: url('../fonts/Ballantines-Script-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Ballantines-Script-webfont.woff') format('woff'),
+         url('../fonts/Ballantines Script.ttf') format('truetype'),
+         url('../fonts-Ballantines-Script-webfont.svg#BallantinesScript') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Candarab";
+    src: url('../fonts/Candarab-webfont.eot');
+    src: url('../fonts/Candarab-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Candarab-webfont.woff') format('woff'),
+         url('../fonts/Candarab.ttf') format('truetype'),
+         url('../fonts-Candarab-webfont.svg#Candarab') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "ebrimabd";
+    src: url('../fonts/ebrimabd-webfont.eot');
+    src: url('../fonts/ebrimabd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ebrimabd-webfont.woff') format('woff'),
+         url('../fonts/ebrimabd.ttf') format('truetype'),
+         url('../fonts-ebrimabd-webfont.svg#Ebrima') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a:link, a:visited, a:active {
+ 	text-decoration:none;
+ 	color: #fff ;	
 }
 
 body{
 	width: 100%;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Candarab", "ebrima", sans-serif;
 	margin: 0 auto;
 	font-size: 18px;
 	color:black;
@@ -18,8 +54,29 @@ header {
 	position: relative;
 }
 
+h2 {
+	font-family: "ebrima", "Candarab", sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+	color: #fff;
+}
+
+
+a {
+	text-decoration: none;
+	font-size: 22px;
+}
+
 .hidden {
 	display: none;
+}
+
+.active {
+	font-family: "Ballantines Script";
+	font-size:26px;
+	font-weight: bold;
+	border-bottom: solid 2px #fff;
+
 }
 
 .container {
@@ -30,24 +87,25 @@ header {
 /*Header Background */
 
 .topBar {
-	background-color: black;
+	background-color: #da291c;
 	width: 100%;
-	height: 80px;
+	height: 10px;
 }
 
 .heroImg {
-	background-image: url(../images/blueBG.svg);
-	line-height: 400px;
+	background-image: url(../images/hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	text-align: center;
 	width: 100%;
-	height: 400px;
+	height: 490px;
 	margin: 0 auto;
 }
 
 /* Header Start */ 
 
 .navCon {
-	margin-top: -440px;
+	margin-top: -460px;
 	width: 1166px;
 	position: absolute;
 }
@@ -58,20 +116,42 @@ header {
 	justify-content: space-between;	
 }
 .logo {
-	background-color: #3FFF5E ;
+	margin-top: -20px;
 	width: 300px;
 	height: 200px;
-	line-height:200px;
-	text-align: center;
 }
 
 .mainNav {
-	background-color:#3FFF5E ;
+	background-color:#da291c ;
 	width:600px;
 	height:80px ;
 	line-height: 80px;
+	border-radius: 10px;
 	text-align: center;
 }
+
+.mainNav ul {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.mainNav ul li a {
+	color: #fff ;
+	padding: 0 20px;
+	border-right:solid 1px #fff;
+	border-left: solid 1px #fff;
+}
+
+.mainNav ul li a:hover {
+	border-bottom: solid 4px #fff;
+	transition: border 0.2s ease-in-out;
+}
+
+
 
 /* Bottom Section */
 
@@ -82,11 +162,12 @@ header {
 }
 
 .title {
-	background-color: #3FFF5E;
-	width: 460px;
+	background-color: #da291c;
+	width: 368px;
 	height: 80px ;
 	line-height: 80px ;
 	text-align: center;
+	border-radius: 10px;
 }
 
 /* Header End */
@@ -102,18 +183,19 @@ header {
 }
 
 .promoImg {
-	background-color: #29ABE2;
+	background-image: url(../images/promo1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 	width: 767px;
-	height: 400px;
-	line-height: 400px ;
+	height: 370px;
 	text-align: center;
 }
+
 
 .promoText {
 	background-color: #29ABE2;
 	width: 368px;
-	height: 400px;
-	line-height: 400px ;
+	height: 370px;
 	text-align: center;
 }
 
@@ -124,13 +206,32 @@ header {
 	justify-content: space-between;
 }
 
-.content {
-	background-color: #29ABE2;
+.content {	
 	width: 368px;
 	height: 300px;
 	line-height: 300px ;
-	text-align: center;	
+	text-align: center;
+
+	font-size: 48px;
+	text-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
 }
+
+.beerLink {
+	background-image: url(../images/beer.jpg);
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+.aboutLink {
+	background-image: url(../images/brewery.jpg);
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+.contactLink {
+	background-image: url(../images/beach.jpg);
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+
 
 /*  Start Footer  */
 
@@ -142,29 +243,70 @@ header {
 }
 
 .footerNav {
-	background-color: #3FFF5E;
-	width: 583px;
-	height: 80px;
+	background-color:#da291c ;
+	width:583px;
+	height:80px ;
 	line-height: 80px;
-	text-align: center;	
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;	 
+}
+
+
+.footerNav ul {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.footerNav ul li a {
+	color: #fff;
+	padding: 2px 20px;
+	border-right:solid 1px #fff;
+	border-left: solid 1px #fff;
+}
+
+.footerNav ul li a:hover {
+	border-bottom: solid 4px #fff;
+	transition: border 0.2s ease-in-out;
+}
+
+.footerRight {
+	display: flex;	
+	flex-direction: column;
+	justify-content: space-between;
+
 }
 
 .social {
-	background-color: #3FFF5E;
 	width: 368px;
-	height: 80px;
-	line-height: 80px;
-	text-align: center;	
+	height: 60px;
+	text-align: right;
+	display: flex;	
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.social img {
+	width: 40px;
+	margin:20px 5px 5px 5px; 
 }
 
 .copyright {
-	margin-top: 40px;
-	background-color: black;
+	margin-top: 5px;
 	width: 100%;
-	height: 80px;
-	line-height: 80px;
-	text-align: center;
-	color: white;
+	height: 40px;  
+
+}
+
+.copyright h2 {
+	color: black;
+	font-size: 14px;
+	text-align: right;	
 }
 
 /* Page 2 */

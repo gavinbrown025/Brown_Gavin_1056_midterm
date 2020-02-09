@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
 	<meta charset="utf-8">
-	<title>Tuck's Rolling Rock</title>
+	<title>Tuck's Red Stripe</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<!--[if lt IE 9]>
@@ -10,22 +10,32 @@
 	<[end if]-->
 </head>
 <body>
-<h1 class="hidden">Tuck's Rolling Rock</h1>
+<h1 class="hidden">Tuck's Red Stripe</h1>
 <!-- outside wraper to be 100% width -->
 	<div class="topBar"></div>
-	<div class="heroImg">Hero Image</div>
+	<div class="heroImg"></div>
+	<div class="topBar"></div>
+
 
 <!-- Start Header -->
 	<header>
-		<h2 class="hidden">Main Navigation</h2>					
+		<h2 class="hidden">Main Navigation</h2>						
 		<div class="navCon">
 			<div class="navFlex">
-				<div class="logo">Logo Image</div>
-				<div class="mainNav">Main Navigation</div>
+				<a href="index.html" class="logo"><img src="images/logoRed.svg" alt="Logo Image"></a>
+				<div class="mainNav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a class="active" href="promo.html">Promo</a></li>
+						<li><a href="product.html">Product</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="titleCon">
-			<h2 class="title">Page Title</h2>
+			<h2 class="title">Home</h2>
 		</div>
 	</header>
 
@@ -50,15 +60,34 @@
 <!-- Start Footer -->
 	<footer class="footerCon">
 		<h2 class="hidden">Main Footer</h2>
-		<div class="footerNav">Footer Navigation</div>
-		<div class="social">Social Media</div>
+		
+		<div class="footerNav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="promo.html">Promo</a></li>
+				<li><a href="product.html">Product</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+
+		<div class="footerRight">
+			<ul class="social">
+				<li><a href=""><img src="images/social1.svg"></a></li>
+				<li><a href=""><img src="images/social2.svg"></a></li>
+				<li><a href=""><img src="images/social3.svg"></a></li>
+				<li><a href=""><img src="images/social4.svg"></a></li>
+				<li><a href=""><img src="images/social5.svg"></a></li>
+			</ul>		
+			<section class="copyright">
+				<h2>Tucks Brewing Co 2020</h2>
+			</section>
+		</div>
+
 	</footer>
 </div> <!-- end Container -->
-
+<div class="topBar"></div>
 <!-- outside container to be 100% width -->
-	<section class="copyright">
-	<h2 class="hidden">Copyright Info</h2>
-	</section>
 
 <script src="js/main.js"></script>
 </body>
