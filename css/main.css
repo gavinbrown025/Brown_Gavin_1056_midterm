@@ -207,9 +207,9 @@ a {
 }
 
 .beerLink {background-image: url(../images/beer.jpg);}
-.aboutLink {background-image: url(../images/brewery.jpg);}
-.contactLink {background-image: url(../images/beach.jpg);}
-.promoLink {background-image: url(../images/_________.jpg);}
+.aboutLink {background-image: url(../images/beach.jpg);}
+.contactLink {background-image: url(../images/brewery.jpg);}
+
 
 .content {	
 	width: 368px;
@@ -231,6 +231,11 @@ a {
 }
 
 
+.promoLink {
+	background-image: url(../images/poster2.jpg);
+	width: 368px;
+	height: 368px;
+}
 
 
 
@@ -239,7 +244,7 @@ a {
 .content:hover {
 	text-shadow: 2px 2px 5px rgba(0,0,0,.5);
 	background-position: top 0 right 0;
-	transition: background-position 2.5s;
+	transition: background-position 5s linear;
 }
 
 
@@ -320,6 +325,7 @@ a {
 	text-align: right;	
 }
 
+
 /* Promo Page */
 
 .video {
@@ -328,10 +334,64 @@ a {
 	height: 600px;
 	line-height: 600px ;
 	text-align: center;
-	background-image: url(../images/beerVideo.gif);
+
+	background-image: url(../images/promoBG.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: top-right;
+
+	overflow: hidden;
+	position: relative;
 }
+
+.video img {
+	margin-top: 170px;
+}
+
+/* +++++++   ANIMATION   ++++++++  */
+
+@keyframes slide {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -378px;
+	}
+	45% {
+		left: -378px;
+	}
+	50% {
+		left: -767px;
+	}
+	70% {
+		left:-767px;
+	}
+	75% {
+		left: -1146px;
+	}
+	95% {
+		left: -1146px;
+	}
+	100% {
+		left: -1488px;
+	}
+}
+
+
+
+.slideCon {
+	width: 234%;
+	margin-left: -30px;
+	position: absolute;
+	right:0;
+	animation: slide 10s infinite;	
+}
+
+
+/* +++++++   ANIMATION   ++++++++  */
+
 
 .promoContentCon {
 	display: flex;
@@ -345,7 +405,7 @@ a {
 	background-color: #29ABE2;
 	width: 568px;
 	height: 400px;
-	line-height: 400px ;
+	line-height: 400px;
 	text-align: center;	
 }
 
@@ -362,27 +422,24 @@ a {
 	width: 100%;
 	height:400px;
 	position: relative;
-
 }
 
 
-/* +++++++   ANIMATION   ++++++++  */
 
+/* Transition animation */
 
 .beer {
-	position: absolute;
-	
+	position: absolute;	
 	left:388px;
 	transition: left 500ms ease-in-out;
 }
+
 .beer img {width: 100%}
 
 
 .product:hover .beer{
 	left: 620px;
 }
-
-
 
 .label {
 	position: absolute;
@@ -401,8 +458,6 @@ a {
 	left:318px;
 	width: 150px;
 }
-
-
 
 .product p {
 	text-align: center;
@@ -430,9 +485,6 @@ a {
 .product:hover .productDesc{
 	opacity: 1;
 }
-
-
-	/*transition: background 500ms ease-in-out, color 500ms ease-in-out;*/
 
 /* +++++++   ANIMATION   ++++++++  */
 
